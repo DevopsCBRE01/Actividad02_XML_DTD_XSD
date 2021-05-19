@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation= "biblioxsd.xsd">>
+    <libros id="L0001">
+        <libro tipo_clase="novela" paginas="127">
+            <titulo>la abeja maya</titulo>
+            <indice>indice</indice>
+            <capitulos>
+                <capitulo titulo="un pais multicolor" paginas_cap="13">
+                    <contenido contenido="www.contenido1.com"/>
+                </capitulo>
+            </capitulos>
+        </libro>
+    </libros>
+<!--Esta va a ser la etiqueta que va a corresponder a las revistas-->
+    <revistas id="R0001">
+        <revista tipo_clase="informatica" paginas="20">
+            <titulo>Todo informática</titulo>
+            <numero>34</numero>
+            <indice>indice</indice>
+            <secciones paginas="13">
+                <contenido contenido="www.contenido2.com"/>
+            </secciones>
+        </revista>
+    </revistas>
+<!--Esta va a ser la etiqueta que va a corresponder a los periodicos-->
+    <periodicos id="P0001">
+        <periodico tipo_clase="nacional" fecha="2021">
+            <indice>indice</indice>
+            <secciones tipo_seccion="economia">
+                <articulo autor="fulanito">
+                    <contenido contenido="www.contenido3.com"/>
+                </articulo>
+            </secciones>
+        </periodico>
+    </periodicos>
+</biblioteca>

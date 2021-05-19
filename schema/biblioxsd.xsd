@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<xs:schema  version="1.0"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+    <!--Elementos simples: titulo, indice, numero-->
+    <xs:element name="titulo" type="xs:string"/>
+    <xs:element name="indice" type="xs:string"/>
+    <xs:element name="numero" type="xs:nonNegativeInteger"/>
+    <!--Atributos: id, tipo_clase, paginas, paginas_cap, contenido, fecha, tipo_seccion, autor-->
+    <xs:attribute name="id">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[A-Z]\d{4}"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="tipo_clase" type="xs:string"></xs:attribute>
+    <xs:attribute name="paginas" type="xs:nonNegativeInteger"></xs:attribute>
+    <xs:attribute name="paginas_cap" type="xs:nonNegativeInteger"></xs:attribute>
+    <xs:attribute name="contenido" type="xs:string"></xs:attribute>
+    <xs:attribute name="fecha" type="xs:date"></xs:attribute>
+    <xs:attribute name="tipo_seccion" type="xs:string"></xs:attribute>
+    <xs:attribute name="autor" type="xs:string"></xs:attribute>
+    <!--Elementos complejos: -->
+</xs:schema>
