@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+<!ELEMENT biblioteca (libros*, revistas*, periodicos*)>
+
+<!ELEMENT libros (libro)>
+<!ATTLIST libros id ID #REQUIRED>
+<!ELEMENT libro (titulo, indice, capitulos)>
+<!ATTLIST libro tipo_clase (novela|infantil|didactico) #REQUIRED>
+<!ATTLIST libro paginas CDATA #REQUIRED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT indice (#PCDATA)>
+<!ELEMENT capitulos (capitulo*)>
+<!ELEMENT capitulo (contenido)>
+<!ATTLIST capitulo titulo CDATA #REQUIRED>
+<!ATTLIST capitulo paginas_cap CDATA #REQUIRED>
+<!ELEMENT contenido (#PCDATA)>
+<!ATTLIST contenido contenido CDATA #REQUIRED>
+
+<!ELEMENT revistas (revista)>
+<!ATTLIST revistas id ID #REQUIRED>
+<!ELEMENT revista (titulo, numero, indice, seccion)>
+<!ATTLIST revista tipo_clase (informatica|corazon|coches|investigacion|otras) #REQUIRED>
+<!ATTLIST revista paginas CDATA #REQUIRED>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT seccion (contenido)>
+<!ATTLIST seccion paginas CDATA #REQUIRED>
+<!ATTLIST contenido contenido CDATA #REQUIRED>
+
+<!ELEMENT periodicos (periodico)>
+<!ATTLIST periodicos id ID #REQUIRED> 
+<!ELEMENT periodico (indice, secciones)>
+<!ATTLIST periodico tipo_clase (nacionales|internacionales) #REQUIRED>
+<!ATTLIST periodico fecha CDATA #REQUIRED>
+<!ELEMENT secciones (articulo*)>
+<!ATTLIST secciones tipo_seccion (economica|opinion|deportes|nacional|internacional) #REQUIRED>
+<!ELEMENT articulo (contenido)>
+<!ATTLIST articulo autor CDATA #REQUIRED>
+]>
+<biblioteca>
+    <libros id="L0001">
+        <libro tipo_clase="novela" paginas="127">
+            <titulo>la abeja maya</titulo>
+            <indice>indice</indice>
+            <capitulos>
+                <capitulo titulo="un pais multicolor" paginas_cap="13">
+                    <contenido contenido="www.contenido1.com"/>
+                </capitulo>
+            </capitulos>
+        </libro>
+    </libros>
+<!--Esta va a ser la etiqueta que va a corresponder a las revistas-->
+    <revistas id="R0001">
+        <revista tipo_clase="informatica" paginas="123">
+            <titulo>Todo informática</titulo>
+            <numero>34</numero>
+            <indice>indice</indice>
+            <seccion paginas="13">
+                <contenido contenido="www.contenido2.com"/>
+            </seccion>
+        </revista>
+    </revistas>
+<!--Esta va a ser la etiqueta que va a corresponder a los periodicos-->
+    <periodicos id="P0001">
+        <periodico tipo_clase="nacionales" fecha="2021">
+            <indice>indice</indice>
+            <secciones tipo_seccion="economica">
+                <articulo autor="fulanito">
+                    <contenido contenido="www.contenido3.com"/>
+                </articulo>
+            </secciones>
+        </periodico>
+    </periodicos>
+</biblioteca>
