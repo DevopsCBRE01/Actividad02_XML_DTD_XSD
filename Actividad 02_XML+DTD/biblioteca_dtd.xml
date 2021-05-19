@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE biblioteca SYSTEM "biblioteca.dtd">
+<biblioteca>
+    <!--Declaración XML para el documento libro-->
+    <Documento id="L0001">
+        <libro tipo_clase="novela" numero_de-paginas="535">
+            <titulo>Sherlock Holmes</titulo>
+            <Capitulos>
+                <capitulo titulo="El objeto robado" numero_de_paginas="35">
+                    <contenido enlace="https://libros.metabiblioteca.org/bitstream/001/571/1/Las%20aventuras%20de%20Sherlock%20Holmes.pdf"/>
+                </capitulo>
+            </Capitulos>
+            <indice_de_contenido>Indice</indice_de_contenido>
+            <sinopsis>Las aventuras de Sherlock Holmes al ser recopiladas en una sola edición,
+             pasan a ser una antología de cuentos detectivescos.
+             Cuya trama se centra en un crimen o misterio que debe ser resuelto a través del ingenio de un detective protagonista,
+             en este caso, Holmes con la ayuda de su fiel compañero, el Dr. Watson.
+            </sinopsis>
+        </libro>    
+    </Documento>
+    <!--Declaración XML para el documento revista-->
+    <Documento id="R0001">
+        <revista tipo_clase="informatica" numero_de_paginas="20">
+            <tituloR>Java</tituloR>
+            <numero_de_revista>1</numero_de_revista>
+            <indice>Indice</indice>
+            <Secciones>
+                <seccion numero_de_paginas="5">
+                    <contenidoR enlace="https://www.channelpartner.es/corporate/noticias/1124448047402/todas-novedades-de-java-16.1.html"/>
+                </seccion>
+            </Secciones>
+        </revista>
+        
+    </Documento>
+<!--Declaración XML para el documento periodico-->
+    <Documento id="P0001">
+        <periodico tipo_clase="nacional" fecha_publicacion="12-05-2021">
+            
+            <indice_seccion>Indice</indice_seccion>
+            <Secciones_periodico>
+                <seccion_periodico tipo_seccion="deportes">
+                    <articulos>
+                        <articulo autor="David López">
+                             <contenidoP enlace="https://www.marca.com/ultimas-noticias.html"/> 
+                        </articulo>                      
+                    </articulos>
+                 </seccion_periodico>
+            </Secciones_periodico>           
+        </periodico>
+    </Documento>
+</biblioteca>
